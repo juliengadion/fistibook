@@ -3,10 +3,13 @@
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-    background-color: gray;
+    background-color: rgb(202, 200, 200);
 }
 
 footer{
+    padding-top: 50px;
     text-align: center;
-    background-color: blueviolet;
+    background-color: rgb(80, 161, 70);
+    height: 200px;
+
 }

@@ -1,3 +1,26 @@
+<?php 
+    $_SESSION["error"] = [];
+    if(!empty($_POST["nom"]) and !empty($_POST["prenom"]) and !empty($_POST["date-naissance"]) and !empty($_POST["sexe"]) and !empty($_POST["adresse"]) and !empty($_POST["mail"]) and !empty($_POST["tel"])){
+        $pattern = "#^[a-zA-Z]+#";
+        $nom = preg_match($pattern, $_POST['nom'], $matches_nom);
+        $prenom = preg_match($pattern, $_POST['prenom'], $matches_prenom);
+        $birth = preg_match("#^[0-9-/]+#", $_POST['date-naissance'], $matches_birth);
+        $adresse = preg_match("#^[A-Za-z'àáâãäåçèéêëìíîïðòóôõöùúûüýÿ -]+$#", $_POST['adresse'], $matches_adresse);
+        $mail = preg_match("#^[a-zA-Z0-9]+#", $_POST['mail'], $matches_mail);
+        $tel = preg_match("#^[0-9-/.]+#", $_POST['tel'], $matches_tel);
+
+        // pas sur.....
+        if(filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL) and $matches_nom[0] === $_POST['nom'] and $matches_prenom[0] === $_POST['prenom']){
+
+        }
+    }
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +69,8 @@
 
 <footer>
     <p>fist fist fist fist fist</p>
+    <div></div>
+    <p>planche planche planche</p>
 </footer>
 
 

@@ -70,7 +70,7 @@
 </main>
 
 <footer>
-    <p>fist fist fist fist fist</p>
+    
 </footer>
 
 
